@@ -14,7 +14,7 @@ function App() {
     try{
     fetchCardData();
     }catch{
-      console.error("Error fetching data from API: ", error);
+      console.error("Error fetching data: ", error);
     }
   }, []);
 
