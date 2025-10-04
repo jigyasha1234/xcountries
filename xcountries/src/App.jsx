@@ -6,7 +6,6 @@ function App() {
   const fetchCardData = async () => {
     const response = await fetch('https://xcountries-backend.labs.crio.do/all');
     const data = await response.json();
-    console.log(data);
     setCardData(data);
   }
 
@@ -19,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px', justifyContent: 'center' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: '10px', justifyContent: 'center' }}>
       {cardData && cardData.map((country) => (
         <Card
           title={country.name}
